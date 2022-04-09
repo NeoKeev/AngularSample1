@@ -1,0 +1,77 @@
+<H1>
+  Welcome to bootstrap
+</H1>
+<!-- <p>
+  <button type="button" class="btn btn-outline-primary" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
+    aria-controls="collapseExample">
+    Toggle
+  </button>
+</p>
+<div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+  <div class="card">
+    <div class="card-body">
+      You can collapse this card by clicking Toggle
+    </div>
+  </div>
+</div>
+<div class="example-button-row">
+  <button mat-button color="accent">Accent</button>
+</div> -->
+<!-- <app-user [message1]="data"> </app-user> -->
+<!-- <app-user (parentComponentEvent)="parentComponent1($event)"></app-user> 
+
+<br>
+<br> -->
+
+<!-- <ul>
+  <li><a routerLink="login">Login1</a>  </li>
+  <li><a routerLink="list">List</a>  </li>
+</ul> -->
+<!-- <router-outlet></router-outlet> -->
+<h3>Admin pages</h3>
+<ul>
+  <li><a routerLink="admin/login">Admin login</a>  </li>
+  <li><a routerLink="admin/list">Admin list</a>  </li>
+</ul>
+<br>
+<br>
+
+<h3>User pages</h3>
+<ul>
+  <li><a routerLink="user/login">User login</a>  </li>
+  <li><a routerLink="user/list">User list</a>  </li>
+</ul>
+<router-outlet></router-outlet>
+<h1>Lazy loading component in angular</h1>
+<button (click)="loadAdmin()">Load Admin list</button>
+<button (click)="loadUser()">Load User list</button>
+<br><br>
+
+<!-- Template driven forms -->
+<div class="col-sm-6">
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)" [formGroup]="loginForm"> 
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" formControlName="email" [ngModel]="userData.email">
+   </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" formControlName="password" [ngModel]="userData.password">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+<div class="col-sm-6">
+  <form [formGroup]="loginForm1" (ngSubmit)="collectData()" > 
+    <div class="mb-3">
+      <label for="exampleInputUserName" class="form-label">User Name</label>
+      <input type="UserName" class="form-control" formControlName="userName">
+     </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" formControlName="password" >
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
